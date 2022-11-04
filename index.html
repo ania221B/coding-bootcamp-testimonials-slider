@@ -1,38 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
 
-  “ I’ve been interested in coding for a while but never taken the jump, until now. 
-  I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
-  excited about the future. ”
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="carousel">
+          <div class="carousel__images">
+            <div class="image">
+              <img src="images/image-tanya.jpg" alt="" />
+            </div>
+            <div class="image">
+              <img src="images/image-john.jpg" alt="" />
+            </div>
+          </div>
+          <div class="carousel__buttons">
+            <button type="button" aria-label="previous slide button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="18">
+                <path
+                  fill="none"
+                  stroke="#8585AC"
+                  stroke-width="3"
+                  d="M11 1L3 9l8 8"
+                />
+              </svg>
+            </button>
+            <button type="button" aria-label="next slide button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="18">
+                <path
+                  fill="none"
+                  stroke="#8585AC"
+                  stroke-width="3"
+                  d="M2 1l8 8-8 8"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="carousel__content">
+            <figure>
+              <blockquote>
+                “ I’ve been interested in coding for a while but never taken the
+                jump, until now. I couldn’t recommend this course enough. I’m
+                now in the job of my dreams and so excited about the future. ”
+              </blockquote>
+              <figcaption>
+                <p>Tanya Sinclair</p>
+                <p>UX Engineer</p>
+              </figcaption>
+            </figure>
 
-  Tanya Sinclair
-  UX Engineer
-
-  “ If you want to lay the best foundation possible I’d recommend taking this course. 
-  The depth the instructors go into is incredible. I now feel so confident about 
-  starting up as a professional developer. ”
-
-  John Tarkpor
-  Junior Front-end Developer
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+            <figure>
+              <blockquote>
+                “ If you want to lay the best foundation possible I’d recommend
+                taking this course. The depth the instructors go into is
+                incredible. I now feel so confident about starting up as a
+                professional developer. ”
+              </blockquote>
+              <figcaption>
+                <p>John Tarkpor</p>
+                <p>Junior Front-end Developer</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Your Name Here</a>.
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
