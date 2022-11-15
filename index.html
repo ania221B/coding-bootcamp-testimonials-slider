@@ -21,7 +21,7 @@
 
     <link href="css/styles.css" rel="stylesheet" />
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 
     <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
 
@@ -38,65 +38,82 @@
   </head>
   <body>
     <main>
-      <div class="container">
-        <div class="carousel grid grid--carousel">
-          <div class="carousel__images">
-            <div class="images__container">
+      <div class="carousel container grid grid--carousel">
+        <div class="carousel__images">
+          <!-- <div class="carousel__images-wrapper"> -->
+          <ul class="carousel__slides carousel__image-list flex" role="list">
+            <li class="slide grid is-selected">
               <img src="images/image-tanya.jpg" alt="" />
-            </div>
-
-            <!-- <div class="images__container">
+            </li>
+            <li class="slide grid">
               <img src="images/image-john.jpg" alt="" />
-            </div> -->
-          </div>
-          <div class="carousel__buttons">
-            <button type="button" aria-label="previous slide button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="18">
-                <path
-                  fill="none"
-                  stroke="#8585AC"
-                  stroke-width="3"
-                  d="M11 1L3 9l8 8"
-                />
-              </svg>
-            </button>
-            <button type="button" aria-label="next slide button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="18">
-                <path
-                  fill="none"
-                  stroke="#8585AC"
-                  stroke-width="3"
-                  d="M2 1l8 8-8 8"
-                />
-              </svg>
-            </button>
-          </div>
-          <div class="carousel__content">
-            <figure>
+            </li>
+          </ul>
+          <!-- </div> -->
+        </div>
+        <div class="carousel__buttons flex">
+          <button
+            class="btn jsBtnPrev"
+            type="button"
+            aria-label="previous slide button"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="18">
+              <path
+                fill="none"
+                stroke="#8585AC"
+                stroke-width="3"
+                d="M11 1L3 9l8 8"
+              />
+            </svg>
+          </button>
+          <button
+            class="btn jsBtnNext"
+            type="button"
+            aria-label="next slide button"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="18">
+              <path
+                fill="none"
+                stroke="#8585AC"
+                stroke-width="3"
+                d="M2 1l8 8-8 8"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="carousel__articles">
+          <ul class="carousel__slides carousel__article-list flex" role="list">
+            <li class="slide flow is-selected">
               <blockquote>
-                “ I’ve been interested in coding for a while but never taken the
-                jump, until now. I couldn’t recommend this course enough. I’m
-                now in the job of my dreams and so excited about the future. ”
+                <p>
+                  “ I’ve been interested in coding for a while but never taken
+                  the jump, until now. I couldn’t recommend this course enough.
+                  I’m now in the job of my dreams and so excited about the
+                  future. ”
+                </p>
               </blockquote>
-              <figcaption>
+              <figcaption class="flex">
                 <p class="fs-300 text-dark fw-700">Tanya Sinclair</p>
                 <p class="fs-300 text-light fw-500">UX Engineer</p>
               </figcaption>
-            </figure>
-
-            <!-- <figure>
+            </li>
+            <li class="slide flow">
               <blockquote>
-                “ If you want to lay the best foundation possible I’d recommend
-                taking this course. The depth the instructors go into is
-                incredible. I now feel so confident about starting up as a
-                professional developer. ”
+                <p>
+                  “ If you want to lay the best foundation possible I’d
+                  recommend taking this course. The depth the instructors go
+                  into is incredible. I now feel so confident about starting up
+                  as a professional developer. ”
+                </p>
               </blockquote>
-              <figcaption>
-                <p>John Tarkpor</p>
-                <p>Junior Front-end Developer</p>
+              <figcaption class="flex">
+                <p class="fs-300 text-dark fw-700">John Tarkpor</p>
+                <p class="fs-300 text-light fw-500">
+                  Junior Front-end Developer
+                </p>
               </figcaption>
-            </figure> -->
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </main>
