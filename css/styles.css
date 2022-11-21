@@ -54,11 +54,21 @@ body {
   font-weight: var(--fw-300);
   color: var(--clr-primary-800);
 
+  background-image: url(../images/pattern-curve.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+@media (min-width: 56.25em) {
+  body {
+    background-size: 40%;
+  }
+}
 /* Resets margins */
 body,
 h1,
@@ -299,11 +309,6 @@ main {
   transform: translateX(-50%);
 }
 
-/* .carousel__images-wrapper {
-  width: inherit;
-  height: inherit;
-} */
-
 .carousel__slides {
   --flex-gap: 0;
   width: inherit;
@@ -324,12 +329,6 @@ main {
   border-radius: var(--br-small);
 }
 
-.carousel__article-list figcaption {
-  --flex-gap: 0.25rem;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
 .carousel__image-list .slide {
   --grid-gap: 0;
   place-items: center;
@@ -337,26 +336,24 @@ main {
   padding-inline: var(--img-inline-pad);
 }
 
+.slide > img {
+  box-shadow: 0 2.25rem 1.75rem -1.75rem rgba(56, 56, 119, 0.4);
+}
+
 .slide > blockquote {
   padding-inline: 1rem;
 }
 
-/* .carousel__images::before {
-  content: "";
-  position: absolute;
-  bottom: 4rem;
-  left: 30%;
-  width: 50%;
-  aspect-ratio: 1;
-  border-radius: 40%;
-  box-shadow: -2.5em 1.75em 2em rgba(56, 56, 119, 0.4);
-  z-index: -1;
-}
-
-.content {
+.slide blockquote > p {
   max-width: 32ch;
   margin-inline: auto;
-} */
+}
+
+.slide > figcaption {
+  --flex-gap: 0.25rem;
+  flex-direction: column;
+  line-height: 1.2;
+}
 
 @media (min-width: 56.25em) {
   .grid--carousel {
@@ -386,12 +383,7 @@ main {
     place-content: center;
   }
 
-  .carousel__articles figcaption {
-    flex-direction: row;
-    padding-inline: 1rem;
-  }
-
-  .carousel__articles blockquote::before {
+  .slide blockquote::before {
     content: "";
     width: 6rem;
     aspect-ratio: 1;
@@ -400,5 +392,11 @@ main {
     background-repeat: no-repeat;
     position: absolute;
     inset: -2.75rem auto auto 23%;
+  }
+
+  .slide > figcaption {
+    --flex-gap: 0.75rem;
+    flex-direction: row;
+    padding-inline: 1rem;
   }
 }
