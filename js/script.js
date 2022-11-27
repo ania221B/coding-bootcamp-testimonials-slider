@@ -1,8 +1,6 @@
 const carousel = document.querySelector('.carousel')
-const imagesContainer = carousel.querySelector('.carousel__image-list')
-const contentContainer = carousel.querySelector('.carousel__article-list')
-const images = [...imagesContainer.querySelectorAll('.slide')]
-const contents = [...contentContainer.querySelectorAll('.slide')]
+const images = [...carousel.querySelector('.carousel__image-list').querySelectorAll('.slide')]
+const contents = [...carousel.querySelector('.carousel__article-list').querySelectorAll('.slide')]
 // const previousButton = carousel.querySelector('.jsBtnPrev')
 const nextButton = carousel.querySelector('.jsBtnNext')
 
