@@ -8,8 +8,8 @@ const nextButton = carousel.querySelector('.jsBtnNext')
 
 function switchSlide (array, button) {
   const width = array[0].getBoundingClientRect().width
-  const parent = array.find(item => item.classList.contains('is-selected')).parentElement
   const currentIndex = array.findIndex(item => item.classList.contains('is-selected'))
+  const parent = array[currentIndex].parentElement
   const targetIndex = button === nextButton
     ? currentIndex + 1
     : currentIndex - 1
