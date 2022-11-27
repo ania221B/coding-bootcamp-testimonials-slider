@@ -10,10 +10,15 @@ function switchSlide (array, button) {
   const width = array[0].getBoundingClientRect().width
   const currentIndex = array.findIndex(item => item.classList.contains('is-selected'))
   const parent = array[currentIndex].parentElement
-  const targetIndex = button === nextButton
+  let targetIndex = button === nextButton
     ? currentIndex + 1
     : currentIndex - 1
 
+  if (targetIndex < 0) {
+    targetIndex = array.length - 1
+  } else if (targetIndex >= array.length) {
+    targetIndex = 0
+  }
   const target = array[targetIndex]
   const amountToMove = width * targetIndex + 'px'
 
